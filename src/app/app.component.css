@@ -1,0 +1,7 @@
+.bgcolor{
+    background: linear-gradient(to right, #bef320, #15adc4);
+}
+
+.navbar-nav .nav-link {
+    color: black !important;
+}

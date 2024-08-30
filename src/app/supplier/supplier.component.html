@@ -1,0 +1,317 @@
+<!-- <h3 style="text-align: center;padding: 20px;">Supplier Details</h3>
+<div class="example-container">
+ 
+    <div class="row">
+      
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill class="main-div">
+      <mat-card fxFlex="100">
+       
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+      <div class="col-md-12">
+      <section>
+        <mat-form-field>
+          <mat-label>Enter SuplierID</mat-label>
+          <input matInput #input maxlength="10" placeholder="1234" (input)="onInput($event)" ngModel name="supp_id" required />
+        </mat-form-field>
+      </section>
+
+      <section>
+        <mat-form-field>
+          <mat-label>Enter SupplierName</mat-label>
+          <input matInput #input maxlength="20" placeholder="Nougat" (input)="onInput($event)" ngModel name="supp_name" required />
+        </mat-form-field>
+      </section>
+
+      <section>
+        <mat-form-field>
+          <mat-label>Enter Contact Details</mat-label>
+          <input matInput #input maxlength="20" placeholder="123456789" (input)="onInput($event)" ngModel name="supp_contact" required />
+        </mat-form-field>
+      </section>
+
+
+      <section>
+        <mat-form-field>
+          <mat-label>Enter GSTIN</mat-label>
+          <input matInput #input maxlength="20"  placeholder="sssss12444777" (input)="onInput($event)" ngModel name="supp_gst" required />
+        </mat-form-field>
+      </section>
+  
+    </div>
+    <div class="col-md-12">
+      <section>
+        <mat-form-field>
+          <mat-label>Enter DealNumber</mat-label>
+          <input matInput #input maxlength="20" placeholder="uuuuu343343" (input)="onInput($event)" ngModel name="supp_dl" required />
+        </mat-form-field>
+      </section>
+
+
+      <section>
+        <mat-form-field>
+          <mat-label>Enter PAN Number</mat-label>
+          <input matInput #input maxlength="20" placeholder="ooo32222" (input)="onInput($event)" ngModel name="supp_pan" required />
+        </mat-form-field>
+      </section>
+
+
+      <section>
+        <mat-form-field>
+          <mat-label>Enter fssai</mat-label>
+          <input matInput #input maxlength="20" placeholder="wswqw124" (input)="onInput($event)" ngModel name="supp_fssai" required />
+        </mat-form-field>
+      </section>
+
+      <section>
+        <div class="example-button-row">
+          <button mat-stroked-button class="btn btn-primary" type="submit" [disabled]="!f.valid">ADD</button>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    
+      <mat-form-field floatLabel="always">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" />
+        <span matTextPrefix>$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+    </div>
+    
+      
+    </form>   
+  
+
+  </mat-card>
+
+</div>
+      
+  
+</div>
+
+
+
+  <hr>
+  <div class="row" *ngIf="submitted">
+    <div class="col-md-12">
+      <h3>Your Data</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>SupplierID</th>
+            <th>SupplierName</th>
+            <th>Contact Details</th>
+            <th>GSTIN</th>
+            <th>DealNumber</th>
+            <th>PAN Number</th>
+            <th>FSSAI</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.supp_id }}</td>
+            <td>{{ user.supp_name }}</td>
+            <td>{{ user.supp_contact }}</td>
+            <td>{{ user.supp_gst }}</td>
+            <td>{{ user.supp_dl }}</td>
+            <td>{{ user.supp_pan }}</td>
+            <td>{{ user.supp_fssai }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+     -->
+
+
+     <!-- <div class="example-container">
+     
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    
+      <mat-form-field floatLabel="always">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" />
+        <span matTextPrefix>$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+   
+      </div> -->
+    
+<!-- <div class="example-container">
+
+      <mat-card id="card" style="text-align: center; background-color:lightblue;">
+        <br>
+        <mat-card-title>
+          Supplier Details
+        </mat-card-title>
+      <br>
+        <mat-card-content>
+      
+          <mat-form-field>
+            <mat-label>Enter SuplierID</mat-label>
+            <input matInput #input maxlength="10" placeholder="1234"  required />
+          </mat-form-field><br/>
+      
+          <mat-form-field>
+            <input matInput placeholder="password">
+          </mat-form-field><br/>
+          <button mat-raised-button color="primary" style="margin-right:5px;">login</button>
+          <button mat-raised-button color="primary" style="margin-right:5px;">register</button>
+        </mat-card-content>
+      </mat-card>
+</div>
+     -->
+
+     <div class="container" >
+     <mat-card>
+      <mat-card-content>
+         
+     <form class="example-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="responsive-container">
+      <table class="example-full-width" cellspacing="0">
+         <tr>
+          <td class="spaced-column">
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter SupplierID</mat-label>
+              <input matInput #suppId="ngModel" maxlength="10" placeholder="1234" ngModel name="supp_id" required />
+              <mat-error *ngIf="suppId.touched && suppId.invalid">Supplier ID is required</mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter SupplierName</mat-label>
+              <input matInput #suppName="ngModel" maxlength="20" placeholder="Nougat" ngModel name="supp_name" required />
+              <mat-error *ngIf="suppName.touched && suppName.invalid">Supplier Name is required</mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    
+      <p>
+        <mat-form-field>
+          <mat-label>Enter Contact Details</mat-label>
+          <input matInput #suppContact="ngModel" maxlength="20" placeholder="123456789" ngModel name="supp_contact" required />
+          <mat-error *ngIf="suppContact.touched && suppContact.invalid">Contact Details are required</mat-error>
+        </mat-form-field>
+      </p>
+    
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td class="spaced-column">
+            <mat-form-field class="example-full-width">
+              <mat-label>GSTIN</mat-label>
+              <input matInput #suppGst="ngModel" maxlength="20" placeholder="sssss12444777" ngModel name="supp_gst" required />
+              <mat-error *ngIf="suppGst.touched && suppGst.invalid">GSTIN is required</mat-error>
+            </mat-form-field>
+          </td>
+          <td class="spaced-column">
+            <mat-form-field class="example-full-width">
+              <mat-label>DealNumber</mat-label>
+              <input matInput #suppDl="ngModel" maxlength="20" placeholder="uuuuu343343" ngModel name="supp_dl" required />
+              <mat-error *ngIf="suppDl.touched && suppDl.invalid">Deal Number is required</mat-error>
+            </mat-form-field>
+          </td>
+          <td class="spaced-column">
+            <mat-form-field class="example-full-width">
+              <mat-label>PAN Number</mat-label>
+              <input matInput #suppPan="ngModel" maxlength="20" placeholder="ooo32222" ngModel name="supp_pan" required />
+              <mat-error *ngIf="suppPan.touched && suppPan.invalid">PAN Number is required</mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>FSSAI</mat-label>
+              <input matInput #suppFssai="ngModel" maxlength="20" placeholder="wswqw124" ngModel name="supp_fssai" required />
+              <mat-error *ngIf="suppFssai.touched && suppFssai.invalid">FSSAI is required</mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    
+    </div>
+  <!-- Apply custom CSS class to the button -->
+  <button mat-stroked-button class="btn btn-primary custom-button" type="submit" [disabled]="!f.valid">ADD</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+     </div>
+
+<hr>
+<div class="row" *ngIf="submitted">
+  <div class="col-md-12">
+    <h3>Your Data</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>SupplierID</th>
+          <th>SupplierName</th>
+          <th>Contact Details</th>
+          <th>GSTIN</th>
+          <th>DealNumber</th>
+          <th>PAN Number</th>
+          <th>FSSAI</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.supp_id }}</td>
+          <td>{{ user.supp_name }}</td>
+          <td>{{ user.supp_contact }}</td>
+          <td>{{ user.supp_gst }}</td>
+          <td>{{ user.supp_dl }}</td>
+          <td>{{ user.supp_pan }}</td>
+          <td>{{ user.supp_fssai }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  @for (column of columns; track column) {
+    <ng-container [matColumnDef]="column.columnDef">
+      <th mat-header-cell *matHeaderCellDef>
+        {{column.header}}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{column.cell(row)}}
+      </td>
+    </ng-container>
+  }
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+ -->
+
+

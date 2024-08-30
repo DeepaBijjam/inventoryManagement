@@ -1,0 +1,71 @@
+
+.container {
+    margin-top: 100px;
+   }
+   
+   
+   .example-form {
+     
+     min-width: 150px;
+     max-width: 500px;
+     width: 100%;
+     
+   }
+   
+     .responsive-container {
+       display: flex;
+       flex-direction: column;
+       gap: 2px;
+     }
+   
+     .example-full-width {
+       width: 100%;
+       
+     }
+   
+     @media (max-width: 800px) {
+       table,
+       tr,
+       td {
+         display: block;
+         width: 100%;
+       }
+   
+       tr {
+         margin-bottom: 16px;
+         
+       }
+   
+       td {
+         padding-right: 8px;
+         width: 100%;
+       
+       }
+   
+       .example-full-width {
+         width: 100%;
+         min-width: unset;
+       }
+     }
+   
+     .spaced-column {
+       padding-right: 16px; /* Add spacing between columns */
+     }
+   
+   
+   /* example-form.component.css */
+   .custom-button {
+     background-color: #4caf50; /* Green background */
+     color: white; /* White text */
+   }
+   
+   .custom-button:hover {
+     background-color: #45a049; /* Darker green on hover */
+   }
+   
+   
+   .demo-table {
+     width: 100%;
+   }
+   
+   

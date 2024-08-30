@@ -1,0 +1,254 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <form class="example-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="responsive-container">
+          <!-- Product Details Table -->
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>ProductID</mat-label>
+                  <input matInput #productId="ngModel" maxlength="10" placeholder="1234" ngModel name="product_id" required />
+                  <mat-error *ngIf="productId.touched && productId.invalid">Product ID is required</mat-error>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <mat-label>HsnCode</mat-label>
+                  <input matInput #productHsnCode="ngModel" maxlength="20" ngModel name="product_hsn_Code" required />
+                  <mat-error *ngIf="productHsnCode.touched && productHsnCode.invalid">HsnCode is required</mat-error>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Additional Fields -->
+          <p>
+            <mat-form-field>
+              <mat-label>BarCode</mat-label>
+              <input matInput #productBarCode="ngModel" maxlength="20" ngModel name="product_bar_Code" required />
+              <mat-error *ngIf="productBarCode.touched && productBarCode.invalid">BarCode is required</mat-error>
+            </mat-form-field>
+          </p>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Product Code</mat-label>
+                  <input matInput #productcode="ngModel" maxlength="20" ngModel name="product_code" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Product Name</mat-label>
+                  <input matInput #productname="ngModel" maxlength="20" ngModel name="product_name" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Product Packing</mat-label>
+                  <input matInput #productpacking="ngModel" maxlength="20" ngModel name="product_packing" required />
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Batch Number</mat-label>
+                  <input matInput #productbatchnumber="ngModel" maxlength="20" ngModel name="product_batch_Number" required />
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Product Quantity</mat-label>
+                  <input matInput #productquantity="ngModel" maxlength="20" ngModel name="product_quantity" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Free</mat-label>
+                  <input matInput #productfree="ngModel" maxlength="20" ngModel name="product_free" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Purchase Price</mat-label>
+                  <input matInput #productpurchaseprice="ngModel" maxlength="20" ngModel name="product_purchase_Price" required />
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Expiry Date</mat-label>
+                  <input matInput #productexpirydate="ngModel" maxlength="20" ngModel name="product_expiry_Date" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Expiry Month</mat-label>
+                  <input matInput #productexpirymonth="ngModel" maxlength="20" ngModel name="product_expiry_Month" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Expiry Year</mat-label>
+                  <input matInput #productexpiryyear="ngModel" maxlength="20" ngModel name="product_expiry_Year" required />
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>CGST</mat-label>
+                  <input matInput #productCgst="ngModel" maxlength="20" ngModel name="product_cgst" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>SGST</mat-label>
+                  <input matInput #productsgst="ngModel" maxlength="20" ngModel name="product_sgst" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>MRP</mat-label>
+                  <input matInput #productmrp="ngModel" maxlength="20" ngModel name="product_mrp" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Discount</mat-label>
+                  <input matInput #productdiscount="ngModel" maxlength="20" ngModel name="product_discount" required />
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Retailer Price</mat-label>
+                  <input matInput #productretailerprice="ngModel" maxlength="20" ngModel name="product_retailer_price" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Special Price</mat-label>
+                  <input matInput #productspecialprice="ngModel" maxlength="20" ngModel name="product_special_Price" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Special Price GST</mat-label>
+                  <input matInput #productspecialPriceGST="ngModel" maxlength="20" ngModel name="product_special_Price_GST" required />
+                </mat-form-field>
+              </td>
+              <td class="spaced-column">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Stockist Price</mat-label>
+                  <input matInput #productstockistPrice="ngModel" maxlength="20" ngModel name="product_stockist_Price" required />
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button mat-stroked-button class="btn btn-primary custom-button" type="submit" [disabled]="!f.valid">ADD</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<hr>
+<div class="row" *ngIf="submitted">
+  <div class="col-md-12">
+    <h3>Your Data</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ProductID</th>
+          <th>HsnCode</th>
+          <th>BarCode</th>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>Product Packing</th>
+          <th>Batch Number</th>
+          <th>Product Quantity</th>
+          <th>Free</th>
+          <th>Purchase Price</th>
+          <th>Expiry Date</th>
+          <th>Expiry Month</th>
+          <th>Expiry Year</th>
+          <th>CGST</th>
+          <th>SGST</th>
+          <th>MRP</th>
+          <th>Discount</th>
+          <th>Retailer Price</th>
+          <th>Special Price</th>
+          <th>Special Price GST</th>
+          <th>Stockist Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.product_id }}</td>
+          <td>{{ product.product_hsn_Code }}</td>
+          <td>{{ product.product_bar_Code }}</td>
+          <td>{{ product.product_code }}</td>
+          <td>{{ product.product_name }}</td>
+          <td>{{ product.product_packing }}</td>
+          <td>{{ product.product_batch_Number }}</td>
+          <td>{{ product.product_quantity }}</td>
+          <td>{{ product.product_free }}</td>
+          <td>{{ product.product_purchase_Price }}</td>
+          <td>{{ product.product_expiry_Date }}</td>
+          <td>{{ product.product_expiry_Month }}</td>
+          <td>{{ product.product_expiry_Year }}</td>
+          <td>{{ product.product_cgst }}</td>
+          <td>{{ product.product_sgst }}</td>
+          <td>{{ product.product_mrp }}</td>
+          <td>{{ product.product_discount }}</td>
+          <td>{{ product.product_retailer_price }}</td>
+          <td>{{ product.product_special_Price }}</td>
+          <td>{{ product.product_special_Price_GST }}</td>
+          <td>{{ product.product_stockist_Price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+ @for (column of columns; track column) {
+   <ng-container [matColumnDef]="column.columnDef">
+     <th mat-header-cell *matHeaderCellDef>
+       {{column.header}}
+     </th>
+     <td mat-cell *matCellDef="let row">
+       {{column.cell(row)}}
+     </td>
+   </ng-container>
+ }
+
+ <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+ <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+-->
+
+
+
